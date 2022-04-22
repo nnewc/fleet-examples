@@ -36,3 +36,13 @@ spec:
       matchLabels:
         env: prod
 ```
+
+## Step-by-Step
+These are the steps I did to create a GitOps workflow
+### Forked fleet-examples
+Just hit the "Fork" button above
+### Created GitRepo Resource in Rancher
+- Select "Continuous Delivery" from the drop down left navigation menu
+- Create a "Git Repo" resource using the form, making sure to set the repo desired path (multi-cluster/helm).
+- Edited the YAML of "fleet-local" Clusters resource to add a `env: prod` label. This enabled the "prod" cluster selector in fleet.yaml
+
